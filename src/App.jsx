@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Form/input";
 import useForm from "./Hooks/useForm";
+import Slide from "./Slide";
 
 const App = () => {
   const cep = useForm('cep');
@@ -18,38 +19,54 @@ const App = () => {
     }
   }
 
+  const slides = [
+    {
+      id: 'slide1',
+      text: 'Slide 1'
+    },
+    {
+      id: 'slide2',
+      text: 'Slide 2'
+    },
+    {
+      id: 'slide3',
+      text: 'Slide 3'
+    }
+  ]
+
   return (
-    <form onSubmit={handleSubmit}>
-      <Input
-        id="cep"
-        label="CEP"
-        type="text"
-        placeholder="00000-000"
-        {...cep}
-      />
+    <Slide slides={slides} />
+    // <form onSubmit={handleSubmit}>
+    //   <Input
+    //     id="cep"
+    //     label="CEP"
+    //     type="text"
+    //     placeholder="00000-000"
+    //     {...cep}
+    //   />
 
-      <Input
-        id="email"
-        label="Email"
-        type="email"
-        {...email}
-      />
+    //   <Input
+    //     id="email"
+    //     label="Email"
+    //     type="email"
+    //     {...email}
+    //   />
 
-      <Input
-        id="nome"
-        label="Nome"
-        type="text"
-        {...nome}
-      />
+    //   <Input
+    //     id="nome"
+    //     label="Nome"
+    //     type="text"
+    //     {...nome}
+    //   />
 
-      <Input
-        id="sobrenome"
-        label="Sobrenome"
-        type="text"
-        {...sobrenome}
-      />
-      <button>Enviar</button>
-    </form>
+    //   <Input
+    //     id="sobrenome"
+    //     label="Sobrenome"
+    //     type="text"
+    //     {...sobrenome}
+    //   />
+    //   <button>Enviar</button>
+    // </form>
   );
 };
 
