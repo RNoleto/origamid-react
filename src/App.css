@@ -25,7 +25,7 @@ h1{
 }
 
 .content{
-    flex: 1,
+    flex: 1;
 }
 
 .animeLeft{
